@@ -2,11 +2,13 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
-        <div className="logo">MealMap</div>
+    <div className=' bg-[rgba(15,12,26,0.69)] w-screen absolute flex justify-between text-xl pb-4 pt-4 text-white '>
+        <div className="logo ml-6">MealMap</div>
       <div>
-        <span><a href=""></a>Home</span>
-        <span><a href=""></a>Recipe</span>
+        <ul className='flex gap-8 mr-6'>
+            <li>Home</li>
+            <li>Recipe</li>
+        </ul>
       </div>
     </div>
   )
