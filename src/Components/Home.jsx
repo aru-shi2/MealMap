@@ -1,7 +1,15 @@
 import React from 'react'
 import Navbar from './Navbar'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+  const navigate=useNavigate();
+  
+  const handleClick=()=>{
+    navigate("/recipe");
+  }
+
   return (
     <>
     <div className='h-screen'>
@@ -15,7 +23,7 @@ const Home = () => {
       <h1 className='text-5xl'>Explore flavors, Anytime, Anywhere</h1>
       <span className='text-xl flex-wrap'>Welcome to your everyday cookbook.
         Discover easy dinners,festive treats, and everything in between </span>
-        <button className='px-6 h-12 rounded-2xl bg-blue-900'>Explore</button>
+        <button onClick={handleClick} className='px-6 h-12 rounded-2xl bg-blue-900'>Explore</button>
     </div>
     </div>
     </>
