@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from './Navbar'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
@@ -18,7 +17,7 @@ const Home = () => {
     </div>
     <div className='absolute bg-gray-900 w-screen h-screen opacity-83'></div>
 
-    <Navbar/>
+    
     <div className='relative flex flex-col items-center gap-10 justify-center text-white h-screen'>
       <h1 className='text-5xl'>Explore flavors, Anytime, Anywhere</h1>
       <span className='text-xl flex-wrap'>Welcome to your everyday cookbook.
