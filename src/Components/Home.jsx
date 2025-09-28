@@ -18,7 +18,7 @@ const Home = () => {
     <div className='absolute bg-gray-900 w-screen h-screen opacity-83'></div>
 
     
-    <div className='relative flex flex-col items-center gap-10 justify-center text-white h-screen'>
+    <div className='relative flex flex-col items-center gap-10 justify-center text-white h-screen font-bold'>
       <h1 className='text-5xl'>Explore flavors, Anytime, Anywhere</h1>
       <span className='text-xl flex-wrap'>Welcome to your everyday cookbook.
         Discover easy dinners,festive treats, and everything in between </span>

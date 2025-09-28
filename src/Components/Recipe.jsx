@@ -19,10 +19,14 @@ const Recipe = () => {
   return (
     <div>
       <div className="box bg-gray-500 max-w-screen overflow-x-hidden h-screen">
-        <div className="top flex flex-col items-center gap-5">
+        <div className='flex items-center justify-center h-[5%] absolute'>
+      <img className='w-screen size-150' src="/images/recipe.jpg" alt="bg" />
+    </div>
+    <div className='absolute bg-gray-900 w-screen h-screen opacity-78'></div>
+        <div className="top flex flex-col absolute left-75 items-center gap-5 text-white font-bold">
           <h1 className="mt-30 text-5xl">
             Search, Cook, Enjoy with 
-            <span className="text-green-800"> MealMap</span>
+            <span className="text-amber-400"> MealMap</span>
           </h1>
           <p className="text-2xl">
             Personalized results based on what you love to cook
@@ -41,7 +45,7 @@ const Recipe = () => {
           </div>
         </div>
 
-        <div className="recipies mt-10 bg-pink-500 max-w-screen flex flex-wrap ">
+        <div className="recipies mt-10 bg-blue-950 max-w-screen flex flex-wrap absolute top-70">
           {Recipe.map(item =>(
             <div key={item.idMeal} className="dish w-[20%] bg-green-500 rounded-xl ml-8 mr-8 mb-10">
             <div className="top flex flex-col items-center">
@@ -49,8 +53,8 @@ const Recipe = () => {
             <h1>{item.strMeal}</h1>
             </div>
             <div className="bottom flex justify-between px-4 bg-amber-900">
-              <button>Recipe</button>
-              <button>Link</button>
+              <button className="px-5 h-8 bg-blue-400 rounded-xl">Recipe</button>
+              <button className="px-5 h-8 bg-blue-400 rounded-xl">Link</button>
             </div>
           </div>
           ))}
