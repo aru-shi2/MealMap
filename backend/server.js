@@ -1,14 +1,14 @@
 import express from 'express'
 import cors from "cors"
 import bodyParser from 'body-parser'
-import { useState } from 'react'
+import { useParams } from 'react-router-dom'
 const app = express()
 const port = 3000
 app.use(cors())
 app.use(bodyParser.json())
 
-app.post('/', async (req, res) => {
-const {dish}=req.body
+app.get('/recipe/:dish', async (req, res) => {
+const dish=req.params.dish
   console.log(dish);
 
 
@@ -16,7 +16,7 @@ const {dish}=req.body
     const data=await response.json()
     console.log(data.meals)
 
-  res.send(data.meals)
+  res.json(data.meals)
 })
 
 app.listen(port, () => {
