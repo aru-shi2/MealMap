@@ -4,6 +4,7 @@ import Home from './Components/Home'
 import Recipe from './Components/Recipe'
 import Navbar from './Components/Navbar'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom'
+import Dish from './Components/Dish'
 
 function App() {
 
@@ -22,9 +23,13 @@ const router=createBrowserRouter([
     element:<><Navbar/><Home/></>
   },
   {
-    path:"/recipe/:food",
+    path:"/recipe",
     element:<><Navbar/><Recipe/></>
-  }
+  },
+  {
+    path:"/dish/:mealId",
+    element:<><Navbar/><Dish/></>
+  },
 ])
 
   return (

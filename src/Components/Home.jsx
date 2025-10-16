@@ -6,7 +6,7 @@ const Home = () => {
   const navigate=useNavigate();
   
   const handleClick=()=>{
-    navigate("/recipe/:food");
+    navigate("/recipe");
   }
 
   return (

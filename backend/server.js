@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from "cors"
 import bodyParser from 'body-parser'
-import { useParams } from 'react-router-dom'
+
 const app = express()
 const port = 3000
 app.use(cors())
@@ -13,6 +13,18 @@ const dish=req.params.dish
 
 
   const response=await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${dish}`);
+    const data=await response.json()
+    console.log(data.meals)
+
+  res.json(data.meals)
+})
+
+app.get('/dish/:mealId', async (req, res) => {
+const Id=req.params.mealId
+  console.log(Id);
+
+
+  const response=await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${Id}`);
     const data=await response.json()
     console.log(data.meals)
 
